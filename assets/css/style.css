@@ -856,16 +856,6 @@ input:checked+label span:last-child {
   letter-spacing: 2px;
 }
 
-.about-me-text h1:before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: -8px;
-  width: 47px;
-  height: 5px;
-  background: #6f6f6f;
-}
-
 .about-me-text p {
   color: #6f6f6f;
   font-size: 16px;
@@ -1427,18 +1417,6 @@ ul.experience-chart h4 {
   color: #6f6f6f;
   font-weight: 700;
   letter-spacing: 2px;
-}
-
-.testimonials-container h1:before {
-  content: "";
-  position: absolute;
-  top: -8px;
-  left: 0;
-  right: 0;
-  margin: auto;
-  width: 80px;
-  height: 5px;
-  background: #6f6f6f;
 }
 
 .single-testimonial img {

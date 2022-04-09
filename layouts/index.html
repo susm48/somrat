@@ -9,7 +9,7 @@
       <div class="col-lg-10 col-sm-8 head-container">
         <div class="head-holder">
           <h1 class="introduction text-center">{{ .Title | markdownify | emojify }}</h1>
-          <div class="text-center">
+          <div class="introduction-desc text-center">
             By paying for Russian software products, you sponsor Russian aggression toward Ukraine.
             Every missile that destroys the Ukrainians’ homes and takes away thousands of civilians' lives
             is purchased for the taxes from the profit of Russian companies, including software developers.
@@ -56,9 +56,6 @@
             <span></span>
           </div>
         </a>
-        <div class="mobile-menu-logo"><a href="{{site.BaseURL | relLangURL }}"><img class="img-fluid"
-              src="{{ site.Params.logo_dark | absURL }}" alt="{{ site.Title }}"></a>
-        </div>
         <div class="menu-slider">
           <nav>
             <ul class="mobile-menu-list">
@@ -70,30 +67,7 @@
             </ul>
             <!-- Language List -->
             {{- if .IsTranslated }}
-            <select class="ml-4" id="select-language" onchange="location = this.value;">
-              {{ $siteLanguages := site.Languages}}
-              {{ $pageLang := .Page.Lang}}
-              {{ range .Page.AllTranslations }}
-              {{ $translation := .}}
-              {{ range $siteLanguages }}
-              {{ if eq $translation.Lang .Lang }}
-              {{ $selected := false }}
-              {{ if eq $pageLang .Lang}}
-              <option id="{{ $translation.Language }}" value="{{ $translation.Permalink }}" selected>{{ .LanguageName }}
-              </option>
-              {{ else }}
-              <option id="{{ $translation.Language }}" value="{{ $translation.Permalink }}">{{ .LanguageName }}</option>
-              {{ end }}
-              {{ end }}
-              {{ end }}
-              {{ end }}
-            </select>
             {{ end }}
-            <ul class="mobile-menu-icons list-inline">
-              {{ range site.Params.social }}
-              <li><a href="{{ .link | safeURL }}"><i class="{{ .icon }}"></i></a></li>
-              {{ end }}
-            </ul>
           </nav>
         </div>
       </div>
@@ -105,18 +79,16 @@
 <!-- Start About Me -->
 {{ with .GetPage "about" }}
 <style>{{.Params.custom_css | safeCSS}}</style>
-<section class="about-me {{.Params.custom_class}}" {{.Params.custom_attributes | safeHTMLAttr}} id="about">
+<section class="section about-me {{.Params.custom_class}}" {{.Params.custom_attributes | safeHTMLAttr}} id="about">
   <div class="container">
     <div class="row about-me-holder">
       <div class="col-lg-6 col-md-6 col-sm-6 about-me-text d-flex align-self-center">
         <div class="text-holder wow fadeInUp" data-wow-duration="1.5s">
-          <h1>{{ .Title | markdownify }}</h1>
-          <div class="content">{{ .Content | markdownify | emojify }}</div>
-          {{ with .Params.button }}
-          {{ if .enable }}
-          <a href="{{ .link | absURL }}" class="download-cv hvr-icon-hang"> {{ .label }} &nbsp; &nbsp; &nbsp;</a>
-          {{ end }}
-          {{ end }}
+          <h1>Stop powering the economy of Russia and support Ukraine’s economy instead</h1>
+          <div class="content">IT industry is one of the fundamentals of the Ukrainian economy now. There are a lot of projects started
+            as ambitious startups in Ukraine, and today they
+            are known worldwide. You can join thousands
+            of companies around the world that have been already using Ukrainian software to grow their business.</div>
         </div>
       </div>
       {{ with .Params.image }}
@@ -125,177 +97,119 @@
       </div>
       {{ end }}
     </div>
+  </div>
+</section>
+{{ end }}
+<!-- End About Me -->
 
-    <div class="row experience-skill">
-      {{ with .Params.experience }}
-      {{ if .enable }}
-      <div class="col-lg-6 col-sm-6 col-11 experience wow fadeInUp" data-wow-duration="1.5s">
-        <h3>{{ .title }}</h3>
-        <ul class="experience-chart">
-          {{ range .experience_list }}
-          <li>
-            <div class="single-experience">
-              <h4>{{ .name | markdownify }}</h4>
-              {{ with .company }} <span>{{ . | markdownify }}</span> {{ end }}
-              {{ with .duration }} <span>{{ . | markdownify }}</span> {{ end }}
-              {{ with .content }} <p>{{ . | markdownify}}</p> {{ end }}
-            </div>
-          </li>
-          {{ end }}
-        </ul>
+<!-- Start Testimonials -->
+{{ with .GetPage "testimonial"}}
+<style>{{.Params.custom_css | safeCSS}}</style>
+<section class="section section-primary testimonials {{.Params.custom_class}}" {{.Params.custom_attributes | safeHTMLAttr}} id="testimonial">
+  <div class="container">
+    <div class="row">
+      <div class="testimonials-container col-lg-12">
+        <h1 class="wow fadeInUp" data-wow-duration="1.5s">List of Russian SaaS and Ukrainian alternatives</h1>
+        <div class="content text-center">A group of Ukrainian volunteers and experts from Ukraine-based Netpeak Agency made a list of popular Russian software and matched them with 100% Ukrainian alternatives. Selected Russian services in the list continue active operations in Russia – receive payment from Russian clients, pay for offices and salaries and pay taxes. Meanwhile, the alternatives are easy to switch to.</div>
+        <iframe class="airtable-embed" src="https://airtable.com/embed/shr8eadtdZa8EEQgo?backgroundColor=orange&viewControls=on" frameborder="0" onmousewheel="" width="100%" height="533" style="background: transparent; border: 1px solid #ccc;"></iframe>
+        <div class="text-center verified">The list is checked and verified for use.</div>
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}
+<!-- End Testimonials -->
+
+<!-- Start About Me -->
+{{ with .GetPage "about" }}
+<style>{{.Params.custom_css | safeCSS}}</style>
+<section class="section about-me {{.Params.custom_class}}" {{.Params.custom_attributes | safeHTMLAttr}} id="about">
+  <div class="container">
+    <div class="row about-me-holder">
+      {{ with .Params.image }}
+      <div class="col-md-6 col-sm-6 about-me-images wow fadeInUp" data-wow-duration="1.5s">
+        <img class="img-fluid" src="{{ . | absURL }}" alt="about-me">
       </div>
       {{ end }}
-      {{ end }}
-
-      {{ with .Params.skill }}
-      {{ if .enable }}
-      <div class="col-lg-6 col-sm-6 col-11 skill wow fadeInUp" data-wow-duration="1.5s">
-        <h3>{{ .title }}</h3>
-        <div class="skill-progress-bar">
-          {{ range .skill_list }}
-          <div class="clearfix">
-            <span class="skillbar-title">{{ .name }}</span>
-            <span class="skill-bar-percent">{{ .percentage }}</span>
-            <div class="skillbar" data-percent="{{ .percentage }}">
-              <div class="skillbar-bar"></div>
-            </div>
-          </div>
-          {{ end }}
+      <div class="col-lg-6 col-sm-6 col-9 col-lg-6 about-me-text d-flex align-self-center">
+        <div class="text-holder wow fadeInUp" data-wow-duration="1.5s">
+          <h1>Stop using bloody services and switch to Ukrainian software</h1>
+          <div class="content">Despite the Russian invasion, Ukrainians continue to work providing quality software to customers worldwide.<br/><br/>Stop paying for Russian services subscription – stand with Ukraine 🇺🇦</div>
         </div>
       </div>
-      {{ end }}
-      {{ end }}
     </div>
   </div>
 </section>
 {{ end }}
 <!-- End About Me -->
 
-<!-- Start Services -->
-{{ with .GetPage "service" }}
-<style>{{.Params.custom_css | safeCSS}}</style>
-<section class="services {{.Params.custom_class}}" {{.Params.custom_attributes | safeHTMLAttr}} id="service">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8 mx-auto col-sm-10">
-        <div class="wow fadeInUp" data-wow-duration="1.5s">
-          <div class="services-heading">
-            <div class="bar"></div>
-            <h1>{{ .Title | markdownify }}</h1>
-          </div>
-          <div class="row">
-            {{ range .Params.service_list }}
-            <div class="col-lg-4 col-sm-4 col-12 services-icon">
-              <div class="service-img">
-                <img class="img-fluid" src="{{ .image | absURL }}" alt="{{ .name | markdownify }}">
-              </div>
-              <div class="service-label">{{ .name | markdownify }}</div>
-            </div>
-            {{ end }}
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-{{ end }}
-<!-- End Services -->
-
-<!-- call to action -->
-{{ with .GetPage "call-to-action" }}
-<style>{{.Params.custom_css | safeCSS}}</style>
-<section id="cta" class="need-service overlay section-sm wow fadeInUp {{.Params.custom_class}}" {{.Params.custom_attributes | safeHTMLAttr}} data-wow-duration="1.5s" style="background-image: url('{{ .Params.bg_image | absURL }}');">
-  <div class="container position-relative z-index-9">
-    <h1>{{ .Title | markdownify }}</h1>
-    {{ with .Content }}<div class="text-white content">{{ . | markdownify }}</div> {{ end }}
-    {{ with .Params.button }}
-    {{ if .enable }}
-    <a href="{{ .link | absURL}}">{{ .label }}</a>
-    {{ end }}
-    {{ end }}
-  </div>
-</section>
-{{ end }}
-<!-- end call to action -->
-
-<!-- Start Portfolio -->
-{{ with .GetPage "portfolio"}}
-<style>{{.Params.custom_css | safeCSS}}</style>
-<section class="portfolio {{.Params.custom_class}}" {{.Params.custom_attributes | safeHTMLAttr}} id="portfolio">
-  <div class="container-fluid text-center">
-    <div class="row portfolio-holder text-left">
-      <div class="col-12 text-center">
-        <h1 class="wow fadeInUp" data-wow-duration="1.5s">{{ .Title }}</h1>
-        <div class="filtering wow fadeInUp" data-wow-duration="1.5s">
-          <div class="btn-group btn-group-toggle portfolio-navigation" data-toggle="buttons">
-            <label class="btn btn-sm btn-primary active hvr-sweep-to-right">
-              <input type="radio" name="shuffle-filter" value="all" checked="checked" />All
-            </label>
-            {{ $categories := slice }}
-            {{ range .Data.Pages }}
-            {{ range .Params.categories }}
-            {{ $categories = $categories | append . }}
-            {{ end }}
-            {{ end }}
-            {{ range ( $categories | uniq ) }}
-            <label class="btn btn-sm btn-primary hvr-sweep-to-right">
-              <input type="radio" name="shuffle-filter" value="{{ . | urlize }}" />{{ . | humanize }}
-            </label>
-            {{ end }}
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-10 col-md-10 col-sm-10 col-10 mx-auto">
-        <div class="row filtr-wrapper wow fadeInUp list" data-wow-duration="1.5s">
-          {{ range first 6 .Data.Pages }}
-          <div class="col-lg-4 col-md-6 col-sm-6 col-12 filtr-item"
-            data-groups="[{{range $index, $element:= .Params.categories }}{{if ne $index 0}},{{end}}&quot;{{. | urlize}}&quot;{{ end }}]">
-            <div class="item-holder">
-              <a class="image-pop" href="{{ .Params.image | absURL }}" title="{{ .Title | markdownify }}">
-                 <img src="{{ .Params.image | absURL }}" alt="{{ .Title | markdownify }}">
-              </a>
-              <div class="item-caption">
-                <h2 class="mt-2"><a class="text-white" href="{{.Permalink}}">{{ .Title | markdownify }}</a></h2>
-                {{ range .Params.categories }}
-                <p class="mb-0 text-light">{{ . | title }}</p>
-                {{ end }}
-                <div class="item-created text-light">{{ .PublishDate.Format "02 Jan, 06" }}</div>
-              </div>
-            </div>
-          </div>
-          {{ end }}
-        </div>
-        {{ if gt (len .Data.Pages) 6}}
-        <div class="text-center wow fadeInUp mt-4" data-wow-duration="1.5s">
-          <a href="{{`portfolio` | absURL}}" class="btn btn-primary">See More</a>
-        </div>
-        {{ end }}
-      </div>
-    </div>
-  </div>
-</section>
-{{ end }}
-<!-- End Portfolio -->
-
-<!-- Start Testimonials -->
+<!-- Start About Me -->
 {{ with .GetPage "testimonial"}}
 <style>{{.Params.custom_css | safeCSS}}</style>
-<section class="testimonials {{.Params.custom_class}}" {{.Params.custom_attributes | safeHTMLAttr}} id="testimonial">
+<section class="section testimonials {{.Params.custom_class}}" {{.Params.custom_attributes | safeHTMLAttr}} id="testimonial">
   <div class="container">
     <div class="row">
-      <div class="testimonials-container col-lg-8 offset-lg-2">
-        <h1 class="wow fadeInUp" data-wow-duration="1.5s">{{ .Title | markdownify }}</h1>
-        <div class="owl-carousel owl-theme wow fadeInUp" data-wow-duration="1.5s">
-          {{ range .Params.testimonial_slider }}
-          <div class="single-testimonial">
-            <div class="testimonial-holder">
-              <img class="img-fluid" src="{{ .image | absURL }}" alt="{{ .name }}">
-              <h2>{{ .name }}</h2>
-              <span>{{ .designation | markdownify }}</span>
-              <p><i class="fa fa-quote-left"></i> {{ .content | markdownify }} <i class="fa fa-quote-right"></i></p>
-            </div>
+      <div class="testimonials-container col-lg-12">
+        <h1 class="wow fadeInUp" data-wow-duration="1.5s">
+          <svg width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M31.4937 9.01447C32.9337 8.14192 34.0399 6.76023 34.5608 5.11376C33.2128 5.92188 31.72 6.50851 30.1311 6.82467C28.8588 5.45432 27.0459 4.59827 25.0396 4.59827C21.1873 4.59827 18.064 7.75496 18.064 11.6486C18.064 12.2012 18.1256 12.7394 18.2447 13.2554C12.4473 12.9614 7.30737 10.1544 3.86708 5.88871C3.26664 6.93 2.92256 8.14123 2.92256 9.4334C2.92256 11.8796 4.15404 14.0376 6.02575 15.302C4.88232 15.2653 3.80673 14.9481 2.86629 14.4201C2.86561 14.4494 2.86561 14.4789 2.86561 14.5088C2.86561 17.9248 5.27009 20.7744 8.46116 21.4221C7.87585 21.5833 7.2596 21.6696 6.62345 21.6696C6.17397 21.6696 5.73691 21.6253 5.31105 21.5429C6.19863 24.344 8.77464 26.3825 11.8272 26.4393C9.43985 28.3304 6.43221 29.4576 3.16396 29.4576C2.60092 29.4576 2.04571 29.4241 1.5 29.359C4.58703 31.3594 8.25359 32.5269 12.1928 32.5269C25.0232 32.5269 32.0396 21.7833 32.0396 12.4662C32.0396 12.1605 32.0327 11.8565 32.0192 11.5541C33.3823 10.5599 34.5648 9.31827 35.5 7.90428C34.2492 8.46513 32.9047 8.84419 31.4937 9.01447Z" fill="red"/>
+          </svg>
+          Share the list on Twitter</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-4">
+        <div class="tweet-block">
+          <div class="tweet-block-text">
+            <strong>#ReplaceRUwithUA </strong>
+            Stop using bloody services and switch to Ukrainian software. Here is the list: https://link.link
           </div>
-          {{ end }}
+          <div class="tw-btn">
+            <a class="twitter-share-button"
+               href="https://twitter.com/intent/tweet"
+               data-size="large"
+               data-text="Stop using bloody services and switch to Ukrainian software. Here is the list:"
+               data-url="https://airtable.com/shr8eadtdZa8EEQgo/tbly62oUXe1UtII2I"
+               data-hashtags="ReplaceRUwithUA">
+              Tweet
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="tweet-block">
+          <div class="tweet-block-text">
+            <strong>#ReplaceRUwithUA </strong>
+            List of Russian SaaS and Ukrainian alternatives. Check it NOW: https://link.link
+          </div>
+          <div class="tw-btn">
+            <a class="twitter-share-button"
+               href="https://twitter.com/intent/tweet"
+               data-size="large"
+               data-text="List of Russian SaaS and Ukrainian alternatives. Check it NOW:"
+               data-url="https://airtable.com/shr8eadtdZa8EEQgo/tbly62oUXe1UtII2I"
+               data-hashtags="ReplaceRUwithUA">
+              Tweet
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="tweet-block">
+          <div class="tweet-block-text">
+            <strong>#ReplaceRUwithUA </strong>
+            A group of volunteers made a list of Russian software and Ukrainian alternatives. Stop supporting invaders. Stand with Ukraine: https://link.link
+          </div>
+          <div class="tw-btn">
+            <a class="twitter-share-button"
+               href="https://twitter.com/intent/tweet"
+               data-size="large"
+               data-text="A group of volunteers made a list of Russian software and Ukrainian alternatives. Stop supporting invaders. Stand with Ukraine:"
+               data-url="https://airtable.com/shr8eadtdZa8EEQgo/tbly62oUXe1UtII2I"
+               data-hashtags="ReplaceRUwithUA">
+              Tweet
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -304,75 +218,18 @@
 {{ end }}
 <!-- End Testimonials -->
 
-<!-- funfacts -->
-{{ with .GetPage "funfacts"}}
-<style>{{.Params.custom_css | safeCSS}}</style>
-<section class="wow fadeInUp section-sm {{.Params.custom_class}}" {{.Params.custom_attributes | safeHTMLAttr}} data-wow-duration="1.5s">
-  <div class="container position-relative z-index-9">
-    {{ with .Title}}
-    <div class="services-heading">
-      <div class="bar"></div>
-      <h1>{{ . | markdownify }}</h1>
-    </div>
-    {{ end }}
-    <div class="fun-facts wow fadeInUp" data-wow-duration="1.5s">
-      {{ range .Params.funfacts }}
-      <div class="fun-fact-holder">
-        <img class="img-fluid" src="{{ .image | absURL }}" alt="{{ .name }}">
-        <p class="fact-counter count" data-count="{{ .count }}">0</p>
-        <p>{{ .name }}</p>
-      </div>
-      {{ end }}
-    </div>
-  </div>
-</section>
-{{ end }}
-<!-- end funfacts -->
-
 <!-- Start Contact -->
 {{ with .GetPage "contact"}}
 <style>{{.Params.custom_css | safeCSS}}</style>
-<section class="contact {{.Params.custom_class}}" {{.Params.custom_attributes | safeHTMLAttr}} style="background-image: url('{{.Params.bg_image | absURL}}');" id="contact">
+<section class="contact {{.Params.custom_class}}" {{.Params.custom_attributes | safeHTMLAttr}} id="contact">
   <div class="container">
     <div class="row">
-      <div class="contact-holder col-lg-8 offset-lg-2 col-sm-8 offset-sm-2">
-        <h1 class="wow fadeInUp" data-wow-duration="1.5s">{{ .Title | markdownify}}</h1>
-        <form method="POST" action="{{ .Params.form_action }}" data-toggle="validator">
-          <div class="form-container row wow fadeInUp" data-wow-duration="1.5s">
-            <div class="form-group col-lg-6">
-              <input class="form-control" type="text" name="username" id="username" placeholder="{{.Params.name}}"
-                required>
-              <div class="help-block with-errors"></div>
-            </div>
-            <div class="form-group col-lg-6">
-              <input class="form-control" type="email" id="email" name="email" placeholder="{{.Params.email}}" required>
-              <div class="help-block with-errors"></div>
-            </div>
-            <div class="form-group col-lg-12">
-              <textarea class="form-control" name="message" id="message" rows="12"
-                placeholder="{{.Params.message}}"></textarea>
-              <div class="help-block with-errors"></div>
-            </div>
-            <div class="form-group col-lg-12 sub-button">
-              <button class="submit form-control hvr-icon-push" type="submit" value="send"> {{.Params.submit}} </button>
-            </div>
-          </div>
-        </form>
-      </div>
-    </div>
-    <div class="row">
       <div class="footer col-lg-10 offset-lg-1">
-        <hr>
-        <ul class="footer-icons list-inline">
-          {{ range site.Params.social }}
-          <li><a href="{{ .link | safeURL }}"><i class="{{ .icon }}"></i></a></li>
-          {{ end }}
-        </ul>
         <div class="to-top">
           <a href="#home"><i class="fa fa-chevron-up"></i></a>
         </div>
         <div class="credit content">
-          {{ site.Params.copyright | markdownify }}
+          2022 ©ReplaceRUwithUA
         </div>
       </div>
     </div>
