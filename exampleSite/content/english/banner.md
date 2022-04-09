@@ -1,5 +1,5 @@
 ---
-title : "I'm Somrat Sorkar"
+title : "I'm Vorobiov Vlad"
 # full screen navigation
 first_name : "MacGyver"
 last_name : "SOMRAT"
