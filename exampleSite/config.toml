@@ -74,7 +74,7 @@ author = "somrat"
 [params.preloader]
 enable = true
 preloader = "images/preloader.gif" # use jpg, png, svg or gif format.
-  
+
 ############################# social site ########################
 [[params.social]]
 icon = "fab fa-facebook-f"
@@ -112,44 +112,23 @@ copyright = "Copyright &copy; 2020 a hugo theme by [somrat](https://somrat.netli
 
 # main menu
 [[Languages.en.menu.main]]
-name = "Home"
-url = "/"
+name = "About"
+pre="#"
+url = "contact"
 weight = 1
 
 [[Languages.en.menu.main]]
-name = "About me"
+name = "List"
 pre = "#"
 url = "about"
 weight = 2
 
 [[Languages.en.menu.main]]
-name = "Service"
+name = "Share"
 pre = "#"
 url = "service"
 weight = 3
 
-[[Languages.en.menu.main]]
-name = "Portfolio"
-pre = "#"
-url = "portfolio"
-weight = 4
-
-[[Languages.en.menu.main]]
-name = "Testimonial"
-pre = "#"
-url = "testimonial"
-weight = 5
-
-[[Languages.en.menu.main]]
-name = "Contact"
-pre = "#"
-url = "contact"
-weight = 6
-
-[[Languages.en.menu.main]]
-name = "Blog"
-url = "blog"
-weight = 7
 
 
 ################################### French language #####################################
