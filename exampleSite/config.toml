@@ -114,19 +114,19 @@ copyright = "Copyright &copy; 2020 a hugo theme by [somrat](https://somrat.netli
 [[Languages.en.menu.main]]
 name = "About"
 pre="#"
-url = "contact"
+url = "about"
 weight = 1
 
 [[Languages.en.menu.main]]
 name = "List"
 pre = "#"
-url = "about"
+url = "list"
 weight = 2
 
 [[Languages.en.menu.main]]
 name = "Share"
 pre = "#"
-url = "service"
+url = "share"
 weight = 3
 
 
