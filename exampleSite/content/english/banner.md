@@ -25,5 +25,6 @@ button:
 custom_class: "" 
 custom_attributes: "" 
 custom_css: ""
+bg_image: "images/backgrounds/hero-image.jpg"
 
 ---
