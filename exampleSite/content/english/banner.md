@@ -6,7 +6,7 @@ with Ukrainian solutions"
 button:
   enable : true
   label : "Check the list"
-  link : "#share-list"
+  link : "#table"
 
 
 bg_image: "images/backgrounds/hero-image.jpg"
