@@ -3,12 +3,8 @@
 {{- partial "head.html" . -}}
 
 <body>
-	{{ if not .IsHome}}
-	{{- partial "header.html" . -}}
-	{{ end }}
 	{{- block "main" . }}{{- end }}
 	{{ if not .IsHome}}
-	{{- partialCached "footer.html" . -}}
 	{{ end }}
 	{{- partialCached "script.html" . -}}
 	<script>window.twttr = (function(d, s, id) {
