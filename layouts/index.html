@@ -2,15 +2,13 @@
 
 <!-- Start Header -->
 {{ with .GetPage "banner" }}
-<style>{{.Params.custom_css | safeCSS}}</style>
 <section class="header {{.Params.custom_class}}" {{.Params.custom_attributes | safeHTMLAttr}} id="home" style="background-image: url('{{ .Params.bg_image | absURL }}');">
   <div class="container h-100">
     <div class="row content h-100">
       <div class="col-lg-12">
         <div class="head-holder">
           <h1 class="introduction text-center">{{ .Title | markdownify | emojify }}</h1>
-          <div class="introduction-desc text-center">
-            By paying for Russian software products, you sponsor Russian aggression toward Ukraine.
+          <div class="introduction-desc text-center">By paying for Russian software products, you sponsor Russian aggression toward Ukraine.
             Every missile that destroys the Ukrainians’ homes and takes away thousands of civilians' lives
             is purchased for the taxes from the profit of Russian companies, including software developers.
           </div>
@@ -27,30 +25,9 @@
 {{ end }}
 <!-- End Header -->
 
-<!-- Start Menu -->
-<section class="menu" id="menu">
-  <nav>
-    <!-- desktop-menu -->
-    <div class="menu-container">
-      <ul class="desktop-menu list-inline mb-0" id="desktop-menu">
-        {{ range site.Menus.main }}
-        <li class="menu-item hvr-underline-from-left 1"><a
-            href="{{if .Pre}}{{site.BaseURL | absLangURL}}{{.Pre}}{{ .URL }}{{else}}{{.URL | absLangURL}}{{end}}">{{ .Name }}</a>
-        </li>
-        {{ end }}
-      </ul>
-      <!-- Language List -->
-
-      <!-- /desktop-menu -->
-    </div>
-  </nav>
-</section>
-<!-- End Menu -->
-
 <!-- Start About Me -->
 {{ with .GetPage "about" }}
-<style>{{.Params.custom_css | safeCSS}}</style>
-<section class="section about-me {{.Params.custom_class}}" {{.Params.custom_attributes | safeHTMLAttr}} id="about">
+<section class="section about-me {{.Params.custom_class}}" {{.Params.custom_attributes | safeHTMLAttr}}>
   <div class="container">
     <div class="row about-me-holder">
       <div class="col-lg-6 col-md-6 col-sm-6 about-me-text d-flex">
@@ -71,9 +48,8 @@
 <!-- End About Me -->
 
 <!-- Start Testimonials -->
-{{ with .GetPage "testimonial"}}
-<style>{{.Params.custom_css | safeCSS}}</style>
-<section class="section testimonials {{.Params.custom_class}}" {{.Params.custom_attributes | safeHTMLAttr}} id="testimonial">
+
+<section class="section testimonials">
   <div class="container">
     <div class="row">
       <div class="col-lg-12">
@@ -87,13 +63,10 @@
     </div>
   </div>
 </section>
-{{ end }}
 <!-- End Testimonials -->
 
 <!-- Start About Me -->
-{{ with .GetPage "about" }}
-<style>{{.Params.custom_css | safeCSS}}</style>
-<section class="section about-me {{.Params.custom_class}}" {{.Params.custom_attributes | safeHTMLAttr}} id="about">
+<section class="section about-me">
   <div class="container">
     <div class="row about-me-holder">
       <div class="col-md-6 col-sm-6 about-me-images wow fadeInUp" data-wow-duration="1.5s">
@@ -107,13 +80,10 @@
     </div>
   </div>
 </section>
-{{ end }}
 <!-- End About Me -->
 
 <!-- Start About Me -->
-{{ with .GetPage "testimonial"}}
-<style>{{.Params.custom_css | safeCSS}}</style>
-<section class="section testimonials {{.Params.custom_class}}" {{.Params.custom_attributes | safeHTMLAttr}} id="testimonial">
+<section class="section testimonials" id="share-list">
   <div class="container">
     <div class="row">
       <div class="col-lg-12">
@@ -182,27 +152,21 @@
     </div>
   </div>
 </section>
-{{ end }}
 <!-- End Testimonials -->
 
 <!-- Start Contact -->
-{{ with .GetPage "contact"}}
-<style>{{.Params.custom_css | safeCSS}}</style>
-<section class="contact {{.Params.custom_class}}" {{.Params.custom_attributes | safeHTMLAttr}} id="contact">
+<section class="contact">
   <div class="container">
     <div class="row">
       <div class="footer col-lg-10 offset-lg-1">
         <div class="to-top">
           <a href="#home"><i class="fa fa-chevron-up"></i></a>
         </div>
-        <div class="credit content">
-          2022 ©ReplaceRUwithUA
-        </div>
+        <div class="credit content">2022 ©ReplaceRUwithUA</div>
       </div>
     </div>
   </div>
 </section>
-{{ end }}
 <!-- End Contact -->
 
 <a href="#home" class="scroll-up hvr-icon-up"></a>
