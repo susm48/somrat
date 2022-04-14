@@ -19,17 +19,29 @@
 
 .section {
     background: black;
+    padding-top: 0;
+    padding-bottom: 160px;
     color: #fff;
 }
+
+.section-first {
+    padding-top: 160px;
+}
+
+.widgets-container {
+    margin-top: 65px;
+}
+
 .section h1 {
     color: #fff;
     font-size: 36px;
-    margin-bottom: 26px;
+    font-weight: 700;
 }
 
 .section .content {
-    font-size: 22px;
-    line-height: 28px;
+    font-size: 20px;
+    line-height: 1.6;
+    font-weight: 300;
 }
 
 
@@ -80,7 +92,16 @@
 }
 
 .testimonials-container {
-    padding: 80px 110px;
+    padding: 80px 90px;
     border-radius: 24px;
     background: linear-gradient(121.99deg, #0057B8 0%, rgba(0, 87, 184, 0.8) 26.13%, #FFD700 100%);
+}
+
+.testimonials-container .content {
+    font-size: 20px;
+    line-height: 1.4;
+}
+
+.testimonials-container h1 {
+    margin-bottom: 16px;
 }

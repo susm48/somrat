@@ -4,8 +4,6 @@
 
 <body>
 	{{- block "main" . }}{{- end }}
-	{{ if not .IsHome}}
-	{{ end }}
 	{{- partialCached "script.html" . -}}
 	<script>window.twttr = (function(d, s, id) {
 		var js, fjs = d.getElementsByTagName(s)[0],

@@ -41,8 +41,6 @@ link = "plugins/jQuery/jquery.min.js"
 [[params.plugins.js]]
 link = "plugins/bootstrap/bootstrap.min.js"
 [[params.plugins.js]]
-link = "plugins/wow.min.js"
-[[params.plugins.js]]
 link = "plugins/text-animation/text-animation.js"
 [[params.plugins.js]]
 link = "plugins/jquery.waypoints.min.js"
@@ -51,39 +49,9 @@ link = "plugins/jquery.waypoints.min.js"
 #################### default parameters ################################
 [params]
 favicon = "https://rm-content.s3.amazonaws.com/5c73b20849db7d29b5991565/upload-26779ac0-12ff-429e-9c1b-1df06ab38721_144.png"
-logo_light = "images/logo.png"
-logo_dark = "images/logo-dark.png"
-logo_width = "150px"
 # Meta data
-description = "This is meta description"
-author = "somrat"
-
-# Preloader
-[params.preloader]
-enable = false
-preloader = "images/preloader.gif" # use jpg, png, svg or gif format.
-
-############################# social site ########################
-[[params.social]]
-icon = "fab fa-facebook-f"
-link = "https://www.facebook.com/somratpro"
-
-[[params.social]]
-icon = "fab fa-twitter"
-link = "https://twitter.com/somratpro"
-
-[[params.social]]
-icon = "fab fa-instagram"
-link = "https://www.instagram.com/somratpro"
-
-[[params.social]]
-icon = "fab fa-github"
-link = "https://github.com/somratpro"
-
-[[params.social]]
-icon = "fab fa-linkedin"
-link = "https://www.linkedin.com/in/somratpro"
-
+description = "Stop using bloody services and switch to Ukrainian software"
+author = "Replace RU with UA"
 
 ################################### English language #####################################
 [Languages.en]
@@ -92,78 +60,3 @@ languageCode = "en-us"
 contentDir = "content/english"
 weight = 1
 home = "Home"
-# copyright
-copyright = "Copyright &copy; 2020 a hugo theme by [somrat](https://somrat.netlify.com)"
-
-
-################# english navigation ##################
-
-# main menu
-[[Languages.en.menu.main]]
-name = "About"
-pre="#"
-url = "about"
-weight = 1
-
-[[Languages.en.menu.main]]
-name = "List"
-pre = "#"
-url = "list"
-weight = 2
-
-[[Languages.en.menu.main]]
-name = "Share"
-pre = "#"
-url = "share"
-weight = 3
-
-
-
-################################### French language #####################################
-[Languages.fr]
-languageName = "Fr"
-languageCode = "fr-fr"
-contentDir = "content/french"
-weight = 2
-home = "Accueil"
-# copyright
-copyright = "Copyright &copy; 2020 a hugo theme by [somrat](https://somrat.netlify.com)"
-
-
-################# english navigation ##################
-
-# main menu
-[[Languages.fr.menu.main]]
-name = "Home"
-url = "/"
-weight = 1
-
-[[Languages.fr.menu.main]]
-name = "About me"
-pre = "#"
-url = "about"
-weight = 2
-
-[[Languages.fr.menu.main]]
-name = "Service"
-pre = "#"
-url = "service"
-weight = 3
-
-[[Languages.fr.menu.main]]
-name = "Portfolio"
-pre = "#"
-url = "portfolio"
-weight = 4
-
-[[Languages.fr.menu.main]]
-name = "Testimonial"
-pre = "#"
-url = "testimonial"
-weight = 5
-
-[[Languages.fr.menu.main]]
-name = "Contact"
-pre = "#"
-url = "contact"
-weight = 6

@@ -26,16 +26,13 @@
 <!-- End Header -->
 
 <!-- Start About Me -->
-{{ with .GetPage "about" }}
-<section class="section about-me {{.Params.custom_class}}" {{.Params.custom_attributes | safeHTMLAttr}}>
+<section class="section section-first">
   <div class="container">
-    <div class="row about-me-holder">
-      <div class="col-lg-6 col-md-6 col-sm-6 about-me-text d-flex">
-        <div class="text-holder wow fadeInUp" data-wow-duration="1.5s">
-          <h1>Stop powering the economy of Russia and support Ukraine’s economy instead</h1>
-        </div>
+    <div class="row">
+      <div class="col-lg-6">
+        <h1>Stop powering the economy of Russia and support Ukraine’s economy instead</h1>
       </div>
-      <div class="col-lg-6 col-sm-6 col-9 about-me-images wow fadeInUp" data-wow-duration="1.5s">
+      <div class="col-lg-6">
         <div class="content">IT industry is one of the fundamentals of the Ukrainian economy now. There are a lot of projects started
           as ambitious startups in Ukraine, and today they
           are known worldwide. You can join thousands
@@ -44,17 +41,16 @@
     </div>
   </div>
 </section>
-{{ end }}
 <!-- End About Me -->
 
 <!-- Start Testimonials -->
 
-<section class="section testimonials">
+<section class="section section-table">
   <div class="container">
     <div class="row">
       <div class="col-lg-12">
         <div class="testimonials-container">
-          <h1 class="wow fadeInUp" data-wow-duration="1.5s">List of Russian SaaS and Ukrainian alternatives</h1>
+          <h1>List of Russian SaaS and Ukrainian alternatives</h1>
           <div class="content text-center">A group of Ukrainian volunteers and experts from Ukraine-based Netpeak Agency made a list of popular Russian software and matched them with 100% Ukrainian alternatives. Selected Russian services in the list continue active operations in Russia – receive payment from Russian clients, pay for offices and salaries and pay taxes. Meanwhile, the alternatives are easy to switch to.</div>
           <iframe class="airtable-embed" src="https://airtable.com/embed/shr8eadtdZa8EEQgo?backgroundColor=orange&viewControls=on" frameborder="0" onmousewheel="" width="100%" height="533" style="background: transparent; border: 1px solid #ccc;"></iframe>
           <div class="text-center verified">The list is checked and verified for use. <a href="https://airtable.com/shr8eadtdZa8EEQgo">See the full list →</a></div>
@@ -66,16 +62,14 @@
 <!-- End Testimonials -->
 
 <!-- Start About Me -->
-<section class="section about-me">
+<section class="section">
   <div class="container">
-    <div class="row about-me-holder">
-      <div class="col-md-6 col-sm-6 about-me-images wow fadeInUp" data-wow-duration="1.5s">
-        <div class="content">Despite the Russian invasion, Ukrainians continue to work providing quality software to customers worldwide.<br/><br/>Stop paying for Russian services subscription – stand with Ukraine 🇺🇦</div>
-      </div>
-      <div class="col-lg-6 col-sm-6 col-9 col-lg-6 about-me-text d-flex">
-        <div class="text-holder wow fadeInUp" data-wow-duration="1.5s">
+    <div class="row">
+      <div class="col-lg-6">
           <h1>Stop using bloody services and switch to Ukrainian software</h1>
-        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="content">Despite the Russian invasion, Ukrainians continue to work providing quality software to customers worldwide.<br/><br/>Stop paying for Russian services subscription – stand with Ukraine 🇺🇦</div>
       </div>
     </div>
   </div>
@@ -83,18 +77,18 @@
 <!-- End About Me -->
 
 <!-- Start About Me -->
-<section class="section testimonials" id="share-list">
+<section class="section" id="share-list">
   <div class="container">
     <div class="row">
       <div class="col-lg-12">
-        <h1 class="wow fadeInUp text-center" data-wow-duration="1.5s">
+        <h1 class="text-center">
           <svg width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd" clip-rule="evenodd" d="M31.4937 9.01447C32.9337 8.14192 34.0399 6.76023 34.5608 5.11376C33.2128 5.92188 31.72 6.50851 30.1311 6.82467C28.8588 5.45432 27.0459 4.59827 25.0396 4.59827C21.1873 4.59827 18.064 7.75496 18.064 11.6486C18.064 12.2012 18.1256 12.7394 18.2447 13.2554C12.4473 12.9614 7.30737 10.1544 3.86708 5.88871C3.26664 6.93 2.92256 8.14123 2.92256 9.4334C2.92256 11.8796 4.15404 14.0376 6.02575 15.302C4.88232 15.2653 3.80673 14.9481 2.86629 14.4201C2.86561 14.4494 2.86561 14.4789 2.86561 14.5088C2.86561 17.9248 5.27009 20.7744 8.46116 21.4221C7.87585 21.5833 7.2596 21.6696 6.62345 21.6696C6.17397 21.6696 5.73691 21.6253 5.31105 21.5429C6.19863 24.344 8.77464 26.3825 11.8272 26.4393C9.43985 28.3304 6.43221 29.4576 3.16396 29.4576C2.60092 29.4576 2.04571 29.4241 1.5 29.359C4.58703 31.3594 8.25359 32.5269 12.1928 32.5269C25.0232 32.5269 32.0396 21.7833 32.0396 12.4662C32.0396 12.1605 32.0327 11.8565 32.0192 11.5541C33.3823 10.5599 34.5648 9.31827 35.5 7.90428C34.2492 8.46513 32.9047 8.84419 31.4937 9.01447Z" fill="#fff"/>
           </svg>
           Share the list on Twitter</h1>
       </div>
     </div>
-    <div class="row">
+    <div class="row widgets-container">
       <div class="col-lg-4">
         <div class="tweet-block">
           <div class="tweet-block-text">
