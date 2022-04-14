@@ -33,12 +33,6 @@ link = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.c
 [[params.plugins.css]]
 link = "plugins/hover/hover.css"
 [[params.plugins.css]]
-link = "plugins/magnific-popup/magnific-popup.css"
-[[params.plugins.css]]
-link = "plugins/owl-carousel/owl.carousel.min.css"
-[[params.plugins.css]]
-link = "plugins/owl-carousel/owl.theme.default.min.css"
-[[params.plugins.css]]
 link = "plugins/text-animation/text-animation.css"
 
 # JS Plugins
@@ -52,12 +46,6 @@ link = "plugins/wow.min.js"
 link = "plugins/text-animation/text-animation.js"
 [[params.plugins.js]]
 link = "plugins/jquery.waypoints.min.js"
-[[params.plugins.js]]
-link = "plugins/shuffle/shuffle.min.js"
-[[params.plugins.js]]
-link = "plugins/magnific-popup/jquery.magnific-popup.min.js"
-[[params.plugins.js]]
-link = "plugins/owl-carousel/owl.carousel.min.js"
 
 
 #################### default parameters ################################

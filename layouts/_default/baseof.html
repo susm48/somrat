@@ -3,7 +3,6 @@
 {{- partial "head.html" . -}}
 
 <body>
-	{{- partialCached "preloader.html" . -}}
 	{{ if not .IsHome}}
 	{{- partial "header.html" . -}}
 	{{ end }}

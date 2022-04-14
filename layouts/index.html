@@ -23,11 +23,6 @@
       </div>
     </div>
   </div>
-
-  <!-- full nav start -->
-
-
-
 </section>
 {{ end }}
 <!-- End Header -->
@@ -47,31 +42,6 @@
       <!-- Language List -->
 
       <!-- /desktop-menu -->
-
-      <!-- mobile-menu -->
-      <div class="mobile-menu">
-        <a class="menu-link">
-          <div class="mobile-menu-nav">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-        </a>
-        <div class="menu-slider">
-          <nav>
-            <ul class="mobile-menu-list">
-              {{ range site.Menus.main }}
-              <li class="hvr-shutter-out-vertical mobile-menu-item 1"><a
-                  href="{{if .Pre}}{{site.BaseURL | absLangURL}}{{.Pre}}{{ .URL }}{{else}}{{.URL | absLangURL}}{{end}}">{{ .Name }}</a>
-              </li>
-              {{ end }}
-            </ul>
-            <!-- Language List -->
-            {{- if .IsTranslated }}
-            {{ end }}
-          </nav>
-        </div>
-      </div>
     </div>
   </nav>
 </section>
