@@ -1,6 +1,6 @@
 ######################## default configuration ####################
 baseURL = "https://examplesite.com"
-title = "Replace RU with UA"
+title = "Replace russian software with Ukrainian solutions"
 theme = "somrat"
 # post pagination
 paginate = "6"
