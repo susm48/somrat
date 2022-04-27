@@ -110,3 +110,8 @@
 .testimonials-container h1 {
     margin-bottom: 16px;
 }
+
+.credit a {
+    border: none;
+    margin-bottom: 15px;
+}

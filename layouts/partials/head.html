@@ -12,7 +12,9 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Replace russian software with Ukrainian solutions">
   <meta name="twitter:description" content="By paying for Russian software products, you sponsor Russian aggression toward Ukraine. Every missile that destroys the Ukrainians’ homes and takes away thousands of civilians' lives is purchased for the taxes from the profit of Russian companies, including software developers">
-  <meta name="twitter:image" content="http://graphics8.nytimes.com/images/2012/02/19/us/19whitney-span/19whitney-span-articleLarge.jpg">
+  {{ with .GetPage "cards" }}
+  <meta name="twitter:image" content="'{{ .Params.twitter_thumb | absURL }}'">
+  {{ end }}
 
   <!-- plugins -->
   <link rel="preconnect" href="https://fonts.gstatic.com">
