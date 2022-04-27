@@ -1,4 +1,4 @@
 ---
-twitter_thumb: "images/twitter-thumb.jpg"
+twitter_thumb: "images/twitter-thumb.png"
 
 ---
