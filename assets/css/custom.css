@@ -115,3 +115,14 @@
     border: none;
     margin-bottom: 15px;
 }
+
+.min-logo {
+    position: absolute;
+    top: 48px;
+}
+
+@media (max-width: 768px) {
+    h1.introduction  {
+        font-size: 50px;
+    }
+}
