@@ -116,9 +116,23 @@
     margin-bottom: 15px;
 }
 
+.logos {
+    /*position: absolute;*/
+    /*top: 25px;*/
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
 .min-logo {
-    position: absolute;
-    top: 48px;
+    margin-right: 80px;
+}
+
+.head-holder {
+    margin-top: -89px;
+}
+
+.logos {
+    margin-top: 25px;
 }
 
 @media (max-width: 768px) {
