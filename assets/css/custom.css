@@ -140,3 +140,10 @@
         font-size: 50px;
     }
 }
+
+@media (max-height: 700px) {
+    h1.introduction  {
+        font-size: 50px;
+    }
+}
+
